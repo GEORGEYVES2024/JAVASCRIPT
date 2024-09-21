@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dcoument</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+
+<script>
+    alert('pause');
+</script>
+<p>
+    O Microsoft Copilot, lançado como Bing Chat em 7 de fevereiro de 2023, 
+    é um assistente de chatbot que representa um marco na evolução da inteligência artificial da Microsoft. 
+    Durante o ano de 2023, a Microsoft começou a consolidar a marca Copilot em seus diversos produtos de chatbot.
+</p>
+
+
+
+</body>
+</html>
+
+<!-- HTML -->
+<div id="question1">
+    <h3>Pergunta 1: Qual é a capital do Brasil?</h3>
+    <input type="radio" name="q1" value="brasilia"> Brasília
+    <input type="radio" name="q1" value="rio"> Rio de Janeiro
+    <input type="radio" name="q1" value="saopaulo"> São Paulo
+</div>
+<!-- JavaScript -->
+<script>
+    const respostas = {};
+    const perguntas = document.querySelectorAll('input[type="radio"]');
+    perguntas.forEach(pergunta => {
+        pergunta.addEventListener('change', () => {
+            respostas[pergunta.name] = pergunta.value;
+        });
+    });
+    function calcularPontuacao() {
+        // Lógica para calcular a pontuação
+        // ...
+        return pontuacao;
+    }
+    function exibirResultado() {
+        const pontuacao = calcularPontuacao();
+        console.log('Pontuação:', pontuacao);
+    }
+</script>

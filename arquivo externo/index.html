@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dcoument</title>
+</head>
+<body>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- HTML -->
+<div id="question1">
+    <h3>Pergunta 1: Qual é a capital do Brasil?</h3>
+    <input type="radio" name="q1" value="brasilia"> Brasília
+    <input type="radio" name="q1" value="rio"> Rio de Janeiro
+    <input type="radio" name="q1" value="saopaulo"> São Paulo
+</div>
+<!-- JavaScript -->
+<script>
+    const respostas = {};
+    const perguntas = document.querySelectorAll('input[type="radio"]');
+    perguntas.forEach(pergunta => {
+        pergunta.addEventListener('change', () => {
+            respostas[pergunta.name] = pergunta.value;
+        });
+    });
+    function calcularPontuacao() {
+        // Lógica para calcular a pontuação
+        // ...
+        return pontuacao;
+    }
+    function exibirResultado() {
+        const pontuacao = calcularPontuacao();
+        console.log('Pontuação:', pontuacao);
+    }
+</script>
+
+
+
+</head>
+<body>
+    <form>
+        Nota 1:<br>
+        <input type="number" id="n1"><br>
+        Nota 2:<br>
+        <input type="number" id="n2"><br>
+        Nota 3:<br>
+        <input type="number" id="n3"><br>
+        Nota 4:<br>
+        <input type="number" id="n4"><br><br>
+        <input type="button" onclick="calculoMedia();" value="Calcular Média">
+    </form>
+
+    <script>
+        function calculoMedia() {
+            var n1 = parseFloat(document.getElementById('n1').value);
+            var n2 = parseFloat(document.getElementById('n2').value);
+            var n3 = parseFloat(document.getElementById('n3').value);
+            var n4 = parseFloat(document.getElementById('n4').value);
+
+            var media = (n1 + n2 + n3 + n4) / 4;
+            alert("Média das notas: " + media.toFixed(2));
+        }
+    </script>
